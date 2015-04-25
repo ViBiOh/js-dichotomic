@@ -1,0 +1,39 @@
+{
+  "name": "jsDichotomic",
+  "version": "0.0.1",
+  "description": "Javascript Utils Functions",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint src/",
+    "checkStyle": "./node_modules/.bin/jscs src/",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec test/**/*.js",
+    "uglify": "./node_modules/.bin/uglifyjs src/dichotomic.js -o index.js -c --preamble //${npm_package_name}@${npm_package_version}",
+    "posttest": "npm run-script uglify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ViBiOh/jsDichotomic.git"
+  },
+  "keywords": [
+    "dichotomic",
+    "search",
+    "sort"
+  ],
+  "author": "Vincent Boutour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViBiOh/jsDichotomic/issues"
+  },
+  "homepage": "https://github.com/ViBiOh/jsDichotomic",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "*",
+    "chai-as-promised": "*",
+    "istanbul": "*",
+    "jscs": "*",
+    "jshint": "*",
+    "mocha": "*",
+    "uglify-js": "*"
+  }
+}

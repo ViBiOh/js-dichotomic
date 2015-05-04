@@ -1,9 +1,7 @@
-JavascriptUtils
-===============
+# jsDichotomic
+
+[![Build Status](https://travis-ci.org/ViBiOh/jsDichotomic.svg?branch=master)](https://travis-ci.org/ViBiOh/jsDichotomic)
 
 ## Installation
 
-As usual, download Node dependencies and build the stuff.
-
-    npm install
-    npm test
+    npm install && npm run build

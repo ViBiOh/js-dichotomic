@@ -1,6 +1,6 @@
-# jsDichotomic
+# js-dichotomic
 
-[![Build Status](https://travis-ci.org/ViBiOh/jsDichotomic.svg?branch=master)](https://travis-ci.org/ViBiOh/jsDichotomic)
+[![Build Status](https://travis-ci.org/ViBiOh/js-dichotomic.svg?branch=master)](https://travis-ci.org/ViBiOh/js-dichotomic)
 
 ## Installation
 

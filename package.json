@@ -1,7 +1,7 @@
 {
-  "name": "jsDichotomic",
+  "name": "js-dichotomic",
   "version": "0.0.1",
-  "description": "Javascript Utils Functions",
+  "description": "Javascript Utils Dichotomic/Binary search/sort",
   "main": "index.js",
   "scripts": {
     "jshint": "./node_modules/.bin/jshint src/",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ViBiOh/jsDichotomic.git"
+    "url": "git://github.com/ViBiOh/js-dichotomic.git"
   },
   "keywords": [
     "dichotomic",
@@ -24,9 +24,9 @@
   "author": "Vincent Boutour",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ViBiOh/jsDichotomic/issues"
+    "url": "https://github.com/ViBiOh/js-dichotomic/issues"
   },
-  "homepage": "https://github.com/ViBiOh/jsDichotomic",
+  "homepage": "https://github.com/ViBiOh/js-dichotomic",
   "devDependencies": {
     "chai": "latest",
     "chai-as-promised": "latest",

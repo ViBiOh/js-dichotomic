@@ -44,7 +44,7 @@ describe('checkSort', () => {
       id: 1
     }, {
       id: 2
-    }], function(a, b) {
+    }], (a, b) => {
       if (a.id < b.id) {
         return -1;
       }

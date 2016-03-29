@@ -1,3 +1,5 @@
+'use strict';
+
 function defaultCompareFn(a, b) {
   if (a < b) {
     return -1;

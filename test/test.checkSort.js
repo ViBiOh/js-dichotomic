@@ -8,7 +8,7 @@ describe('checkSort', () => {
   }
 
   it('should check if an undefined array is sorted', () => {
-    expect(checkSort(undefined)).to.be.undefined;
+    expect(checkSort(undefined)).to.be.true;
   });
 
   it('should check if a single post array is sorted', () => {

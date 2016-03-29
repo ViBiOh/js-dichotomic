@@ -19,15 +19,15 @@ describe('search', () => {
   });
 
   it('should insert in an already defined array', () => {
-    var arrayInsert = [0, 2, 3, 4, 5, 6, 7, 8, 9];
+    const arrayInsert = [0, 2, 3, 4, 5, 6, 7, 8, 9];
     expect(insert(1, arrayInsert, undefined)).to.be.equal(1);
     expect(checkSort(arrayInsert)).to.be.true;
     expect(arrayInsert.length).to.be.equal(10);
   });
 
   it('should insert in an already defined array with doublon', () => {
-    var arrayInsert = [0, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9];
-    var insertIndex = insert(2, arrayInsert, undefined);
+    const arrayInsert = [0, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9];
+    const insertIndex = insert(2, arrayInsert, undefined);
     expect(insertIndex).to.be.above(1);
     expect(insertIndex).to.be.below(5);
     expect(checkSort(arrayInsert)).to.be.true;
@@ -35,14 +35,14 @@ describe('search', () => {
   });
 
   it('should insert at a beginning of an array', () => {
-    var arrayInsert = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const arrayInsert = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     expect(insert(0, arrayInsert, undefined)).to.be.equal(0);
     expect(checkSort(arrayInsert)).to.be.true;
     expect(arrayInsert.length).to.be.equal(10);
   });
 
   it('should insert at a ending of an array', () => {
-    var arrayInsert = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    const arrayInsert = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     expect(insert(9, arrayInsert, undefined)).to.be.equal(9);
     expect(checkSort(arrayInsert)).to.be.true;
     expect(arrayInsert.length).to.be.equal(10);

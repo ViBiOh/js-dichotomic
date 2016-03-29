@@ -27,9 +27,12 @@
   "homepage": "https://github.com/ViBiOh/js-dichotomic",
   "devDependencies": {
     "babel": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-eslint": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb": "latest",
     "chai": "*",
     "chai-as-promised": "latest",
-    "eslint": "latest",
     "istanbul": "latest",
     "mocha": "latest",
     "uglify-js": "latest"

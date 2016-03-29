@@ -22,10 +22,5 @@ Desktop.ini
 *.iws
 
 # Node Package Manager
-node_modules
-
-# Bower dependencies Manage
-bower_components
-
-# Grunt Builder
-coverage
+node_modules/
+coverage/

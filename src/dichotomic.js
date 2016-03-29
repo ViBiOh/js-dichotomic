@@ -16,11 +16,10 @@ function getCompareFn(compareFn) {
 }
 
 function findIndex(element, array, compareFn) {
-  let min = 0;
-
   if (array) {
     const compare = getCompareFn(compareFn);
     let max = array.length - 1;
+    let min = 0;
 
     if (max >= 0) {
       while (min <= max) {
@@ -39,12 +38,14 @@ function findIndex(element, array, compareFn) {
         }
       }
     }
+
+    return {
+      found: false,
+      index: min,
+    };
   }
 
-  return {
-    found: false,
-    index: min,
-  };
+  return undefined;
 }
 
 export function checkSort(array, compareFn) {

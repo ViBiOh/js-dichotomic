@@ -4,7 +4,10 @@
 
 ## Installation
 
-    npm install && npm run build
+```
+npm i
+npm run build
+```
 
 ## Usage
 

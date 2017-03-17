@@ -33,6 +33,7 @@
     "babel-preset-es2015": "latest",
     "chai": "*",
     "chai-as-promised": "latest",
+    "codecov": "latest",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "latest",

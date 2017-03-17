@@ -1,0 +1,47 @@
+import test from 'ava';
+import { checkSort } from '../src/dichotomic';
+
+test('should check if an undefined array is sorted', (t) => {
+  t.is(checkSort(undefined), true);
+});
+
+test('should check if a single post array is sorted', (t) => {
+  t.is(checkSort([1]), true);
+});
+
+test('should check if an array is sorted', (t) => {
+  const largeArray = [];
+  for (let i = 0; i < 5000; i += 1) {
+    largeArray.push(i);
+  }
+
+  t.is(checkSort(largeArray), true);
+});
+
+test('should check if an array is not sorted at end', (t) => {
+  t.is(checkSort([1, 2, 3, 5, 4]), false);
+});
+
+test('should check if an array is not sorted at begginning', (t) => {
+  t.is(checkSort([2, 1, 3, 4, 5]), false);
+});
+
+test('should check if an array is sorted with doublon', (t) => {
+  t.is(checkSort([2, 2, 2, 2, 2, 2, 2, 3]), true);
+});
+
+test('should check if an array is sorted with improper function', (t) => {
+  t.is(checkSort([{ id: 1 }, { id: 2 }]), false);
+});
+
+test('should check if an array is sorted with proper function', (t) => {
+  t.is(checkSort([{ id: 1 }, { id: 2 }], (a, b) => {
+    if (a.id < b.id) {
+      return -1;
+    }
+    if (a.id === b.id) {
+      return 0;
+    }
+    return 1;
+  }), true);
+});

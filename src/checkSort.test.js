@@ -19,11 +19,11 @@ test('should check if an array is sorted', (t) => {
 });
 
 test('should check if an array is not sorted at end', (t) => {
-  t.is(checkSort([1, 2, 3, 5, 4]), false);
+  t.false(checkSort([1, 2, 3, 5, 4]));
 });
 
 test('should check if an array is not sorted at begginning', (t) => {
-  t.is(checkSort([2, 1, 3, 4, 5]), false);
+  t.false(checkSort([2, 1, 3, 4, 5]));
 });
 
 test('should check if an array is sorted with doublon', (t) => {
@@ -31,7 +31,7 @@ test('should check if an array is sorted with doublon', (t) => {
 });
 
 test('should check if an array is sorted with improper function', (t) => {
-  t.is(checkSort([{ id: 1 }, { id: 2 }]), false);
+  t.false(checkSort([{ id: 1 }, { id: 2 }]));
 });
 
 test('should check if an array is sorted with proper function', (t) => {

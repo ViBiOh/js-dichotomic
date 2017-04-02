@@ -20,29 +20,29 @@ test('should insert before in a single array', (t) => {
 test('should insert in an already defined array', (t) => {
   const arrayInsert = [0, 2, 3, 4, 5, 6, 7, 8, 9];
   t.is(insert(1, arrayInsert, undefined), 1);
-  t.is(checkSort(arrayInsert), true);
+  t.true(checkSort(arrayInsert));
   t.is(arrayInsert.length, 10);
 });
 
 test('should insert in an already defined array wtesth doublon', (t) => {
   const arrayInsert = [0, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9];
   const insertIndex = insert(2, arrayInsert, undefined);
-  t.is(insertIndex > 1, true);
-  t.is(insertIndex < 5, true);
-  t.is(checkSort(arrayInsert), true);
+  t.true(insertIndex > 1);
+  t.true(insertIndex < 5);
+  t.true(checkSort(arrayInsert));
   t.is(arrayInsert.length, 13);
 });
 
 test('should insert at a beginning of an array', (t) => {
   const arrayInsert = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   t.is(insert(0, arrayInsert, undefined), 0);
-  t.is(checkSort(arrayInsert), true);
+  t.true(checkSort(arrayInsert));
   t.is(arrayInsert.length, 10);
 });
 
 test('should insert at a ending of an array', (t) => {
   const arrayInsert = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   t.is(insert(9, arrayInsert, undefined), 9);
-  t.is(checkSort(arrayInsert), true);
+  t.true(checkSort(arrayInsert));
   t.is(arrayInsert.length, 10);
 });

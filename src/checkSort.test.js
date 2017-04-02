@@ -2,11 +2,11 @@ import test from 'ava';
 import { checkSort } from '../src/dichotomic';
 
 test('should check if an undefined array is sorted', (t) => {
-  t.is(checkSort(undefined), true);
+  t.true(checkSort(undefined));
 });
 
 test('should check if a single post array is sorted', (t) => {
-  t.is(checkSort([1]), true);
+  t.true(checkSort([1]));
 });
 
 test('should check if an array is sorted', (t) => {
@@ -15,7 +15,7 @@ test('should check if an array is sorted', (t) => {
     largeArray.push(i);
   }
 
-  t.is(checkSort(largeArray), true);
+  t.true(checkSort(largeArray));
 });
 
 test('should check if an array is not sorted at end', (t) => {
@@ -27,7 +27,7 @@ test('should check if an array is not sorted at begginning', (t) => {
 });
 
 test('should check if an array is sorted with doublon', (t) => {
-  t.is(checkSort([2, 2, 2, 2, 2, 2, 2, 3]), true);
+  t.true(checkSort([2, 2, 2, 2, 2, 2, 2, 3]));
 });
 
 test('should check if an array is sorted with improper function', (t) => {

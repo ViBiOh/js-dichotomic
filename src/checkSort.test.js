@@ -35,13 +35,16 @@ test('should check if an array is sorted with improper function', (t) => {
 });
 
 test('should check if an array is sorted with proper function', (t) => {
-  t.is(checkSort([{ id: 1 }, { id: 2 }], (a, b) => {
-    if (a.id < b.id) {
-      return -1;
-    }
-    if (a.id === b.id) {
-      return 0;
-    }
-    return 1;
-  }), true);
+  t.is(
+    checkSort([{ id: 1 }, { id: 2 }], (a, b) => {
+      if (a.id < b.id) {
+        return -1;
+      }
+      if (a.id === b.id) {
+        return 0;
+      }
+      return 1;
+    }),
+    true,
+  );
 });

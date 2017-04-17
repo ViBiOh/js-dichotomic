@@ -4,8 +4,10 @@
   "description": "Javascript Utils Dichotomic/Binary search/sort",
   "main": "index.js",
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint src/",
-    "pretest": "npm run eslint",
+    "prettier": "./node_modules/.bin/prettier --print-width 100 --single-quote --trailing-comma all --color --write \"./app/**/*.{js,jsx}\"",
+    "eslint": "./node_modules/.bin/eslint --fix src/",
+    "codestyle": "npm run prettier && npm run eslint",
+    "pretest": "npm run codestyle",
     "test": "./node_modules/.bin/nyc --reporter text --reporter lcov --require babel-core/register ./node_modules/.bin/ava",
     "coverage": "./node_modules/.bin/codecov -f ./coverage/lcov.info",
     "build:uglify": "./node_modules/.bin/babel ./src/dichotomic.js | ./node_modules/.bin/uglifyjs -o index.js -c -mt --preamble //${npm_package_name}@${npm_package_version}",
@@ -37,6 +39,7 @@
     "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "latest",
     "nyc": "latest",
+    "codestyle": "latest",
     "uglify-js": "latest"
   },
   "ava": {

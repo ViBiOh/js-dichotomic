@@ -39,6 +39,7 @@
     "eslint-config-airbnb": "latest",
     "eslint-plugin-import": "latest",
     "nyc": "latest",
+    "prettier": "latest",
     "codestyle": "latest",
     "uglify-js": "latest"
   },

@@ -10,7 +10,7 @@
     "pretest": "npm run codestyle",
     "test": "./node_modules/.bin/nyc --reporter text --reporter lcov --require babel-core/register ./node_modules/.bin/ava",
     "coverage": "./node_modules/.bin/codecov -f ./coverage/lcov.info",
-    "build:uglify": "./node_modules/.bin/babel ./src/dichotomic.js | ./node_modules/.bin/uglifyjs -o index.js -c --preamble //${npm_package_name}@${npm_package_version}",
+    "build:uglify": "./node_modules/.bin/babel ./src/dichotomic.js | ./node_modules/.bin/uglifyjs -o index.js -c",
     "build": "npm run test && npm run build:uglify"
   },
   "repository": {

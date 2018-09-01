@@ -1,5 +1,5 @@
 import test from 'ava';
-import { search } from '../src/dichotomic';
+import { search } from './dichotomic';
 
 const largeArray = [];
 for (let i = 0; i < 5000; i += 1) {

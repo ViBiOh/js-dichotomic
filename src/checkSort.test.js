@@ -1,5 +1,5 @@
 import test from 'ava';
-import { checkSort } from '../src/dichotomic';
+import { checkSort } from './dichotomic';
 
 test('should check if an undefined array is sorted', (t) => {
   t.true(checkSort(undefined));

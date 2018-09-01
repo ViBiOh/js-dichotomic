@@ -1,5 +1,5 @@
 import test from 'ava';
-import { insert, checkSort } from '../src/dichotomic';
+import { insert, checkSort } from './dichotomic';
 
 test('should not insert in an undefined array', (t) => {
   t.is(insert(), undefined);
@@ -24,7 +24,7 @@ test('should insert in an already defined array', (t) => {
   t.is(arrayInsert.length, 10);
 });
 
-test('should insert in an already defined array wtesth doublon', (t) => {
+test('should insert in an already defined array with doublon', (t) => {
   const arrayInsert = [0, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9];
   const insertIndex = insert(2, arrayInsert, undefined);
   t.true(insertIndex > 1);

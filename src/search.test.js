@@ -8,22 +8,22 @@ for (let i = 0; i < 5000; i += 1) {
 
 test('should search in an undefined array', (t) => {
   const result = search(undefined, undefined);
-  t.is(result, undefined);
+  t.is(result, -1);
 });
 
 test('should search in an empty array', (t) => {
   const result = search(undefined, []);
-  t.is(result, undefined);
+  t.is(result, -1);
 });
 
 test('should not found undefined in a single post array', (t) => {
   const result = search(undefined, [1]);
-  t.is(result, undefined);
+  t.is(result, -1);
 });
 
 test('should not found a value in a single post array', (t) => {
   const result = search(0, [1]);
-  t.is(result, undefined);
+  t.is(result, -1);
 });
 
 test('should found in a single post array', (t) => {

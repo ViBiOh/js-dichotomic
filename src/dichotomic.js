@@ -60,6 +60,12 @@ function findIndex(element, array, compareFn = defaultCompareFn) {
   };
 }
 
+/**
+ * Check if given array is properly sorted according to compareFn
+ * @param  {Array}    array     Array to check
+ * @param  {Function} compareFn Compare function between two items of array
+ * @return {Boolean}            True is array is properly sorted, false otherwise
+ */
 export function checkSort(array, compareFn = defaultCompareFn) {
   if (!Array.isArray(array) || !array.length) {
     return true;
@@ -74,6 +80,13 @@ export function checkSort(array, compareFn = defaultCompareFn) {
   return true;
 }
 
+/**
+ * Insert element in array.
+ * @param  {Any}      element   Element to insert
+ * @param  {Array}    array     Array to insert
+ * @param  {Function} compareFn Compare function between two items of array
+ * @return {Number}             Index of insertion, or undefined if not an array
+ */
 export function insert(element, array, compareFn) {
   const result = findIndex(element, array, compareFn);
 
@@ -85,6 +98,13 @@ export function insert(element, array, compareFn) {
   return undefined;
 }
 
+/**
+ * Search item in an array
+ * @param  {Any}      element   Element search
+ * @param  {Array}    array     Array to search
+ * @param  {Function} compareFn Compare function between two items of array
+ * @return {Number}             Found index or -1
+ */
 export function search(element, array, compareFn) {
   const result = findIndex(element, array, compareFn);
 
@@ -92,5 +112,5 @@ export function search(element, array, compareFn) {
     return array[result.index];
   }
 
-  return undefined;
+  return -1;
 }

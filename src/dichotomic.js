@@ -14,6 +14,13 @@ function defaultCompareFn(a, b) {
   return 1;
 }
 
+/**
+ * Dichotomically find insertion index of an element, or matching one if already present.
+ * @param  {Any}      element   Searched element
+ * @param  {Array}    array     Sorted array to search in
+ * @param  {Function} compareFn Function used to compare two items of the array
+ * @return {Object}             Object describing if research was successful and best matching index
+ */
 function findIndex(element, array, compareFn = defaultCompareFn) {
   if (!Array.isArray(array)) {
     return undefined;
